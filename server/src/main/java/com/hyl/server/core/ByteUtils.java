@@ -1,4 +1,4 @@
-package com.hyl.remotemonitor.core;
+package com.hyl.server.core;
 
 /**
  * Bytes数组处理工具

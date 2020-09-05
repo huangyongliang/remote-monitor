@@ -1,4 +1,4 @@
-package com.hyl.remotemonitor.core;
+package com.hyl.server.core;
 
 /**
  * Class文件修改器 (JDK 8)

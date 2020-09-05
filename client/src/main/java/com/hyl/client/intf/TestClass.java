@@ -1,4 +1,4 @@
-package com.hyl.remotemonitor.core;
+package com.hyl.client.intf;
 
 /**
  * 测试类

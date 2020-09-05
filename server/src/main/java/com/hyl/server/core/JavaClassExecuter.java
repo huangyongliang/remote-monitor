@@ -1,4 +1,4 @@
-package com.hyl.remotemonitor.core;
+package com.hyl.server.core;
 
 import java.lang.reflect.Method;
 
@@ -20,7 +20,7 @@ public class JavaClassExecuter {
     public static String execute(byte[] classByte){
         HackSystem.clearBuffer();
         ClassModifier cm = new ClassModifier(classByte);
-        byte[] modifierByte = cm.modifyUTF8Constant("java/lang/System","com/hyl/remotemonitor/core/HackSystem");
+        byte[] modifierByte = cm.modifyUTF8Constant("java/lang/System","com/hyl/server/core/HackSystem");
 
         HotSwapClassLoader
             loader = new HotSwapClassLoader();

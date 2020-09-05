@@ -1,4 +1,4 @@
-package com.hyl.remotemonitor.core;
+package com.hyl.server.core;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -9,7 +9,7 @@ import java.io.InputStream;
  */
 public class TestServerClass {
     public static void main(String[] args) throws Exception {
-        InputStream is = new FileInputStream("D:\\git\\mybase\\projects\\github\\remote-monitor\\target\\classes\\com\\hyl\\remotemonitor\\core\\TestClass.class");
+        InputStream is = new FileInputStream("D:\\git\\mybase\\projects\\github\\remote-monitor\\client\\target\\classes\\com\\hyl\\client\\intf\\ClassDto.class");
         byte [] b = new byte[is.available()];
         is.read(b);
         is.close();
