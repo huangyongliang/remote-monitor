@@ -30,7 +30,9 @@ public class ClientController {
         ClassDto classDto = new ClassDto();
         classDto.setName("TestClass");
         try {
-            InputStream is = new FileInputStream("D:\\git\\mybase\\projects\\github\\remote-monitor\\client\\target\\classes\\com\\hyl\\client\\intf\\TestClass.class");
+            // 本地class文件目录
+            String filePath = "D:\\git\\mybase\\projects\\github\\remote-monitor\\client\\target\\classes\\com\\hyl\\client\\intf\\TestClass.class";
+            InputStream is = new FileInputStream(filePath);
             byte [] b = new byte[is.available()];
             is.read(b);
             is.close();
