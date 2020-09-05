@@ -2,15 +2,15 @@
 #  port: 8761
 #eureka:
 #  server:
-#    enable-self-preservation: false  #¹Ø±Õ×ÔÎÒ±£»¤»úÖÆ
-#    eviction-interval-timer-in-ms: 60000 #ÉèÖÃÇåÀí¼ä¸ô£¨µ¥Î»£ººÁÃë Ä¬ÈÏÊÇ60*1000£©
+#    enable-self-preservation: false  #å…³é—­è‡ªæˆ‘ä¿æŠ¤æœºåˆ¶
+#    eviction-interval-timer-in-ms: 60000 #è®¾ç½®æ¸…ç†é—´éš”ï¼ˆå•ä½ï¼šæ¯«ç§’ é»˜è®¤æ˜¯60*1000ï¼‰
 #  instance:
 #    hostname: localhost
 #
 #  client:
-#      registerWithEureka: false #²»°Ñ×Ô¼º×÷ÎªÒ»¸ö¿Í»§¶Ë×¢²áµ½×Ô¼ºÉíÉÏ
-#      fetchRegistry: false  #²»ĞèÒª´Ó·şÎñ¶Ë»ñÈ¡×¢²áĞÅÏ¢£¨ÒòÎªÔÚÕâÀï×Ô¼º¾ÍÊÇ·şÎñ¶Ë£¬¶øÇÒÒÑ¾­½ûÓÃ×Ô¼º×¢²áÁË£©
-#      serviceUrl: #Î¢·şÎñÒª×¢²áµ½µÄµØÖ·.
+#      registerWithEureka: false #ä¸æŠŠè‡ªå·±ä½œä¸ºä¸€ä¸ªå®¢æˆ·ç«¯æ³¨å†Œåˆ°è‡ªå·±èº«ä¸Š
+#      fetchRegistry: false  #ä¸éœ€è¦ä»æœåŠ¡ç«¯è·å–æ³¨å†Œä¿¡æ¯ï¼ˆå› ä¸ºåœ¨è¿™é‡Œè‡ªå·±å°±æ˜¯æœåŠ¡ç«¯ï¼Œè€Œä¸”å·²ç»ç¦ç”¨è‡ªå·±æ³¨å†Œäº†ï¼‰
+#      serviceUrl: #å¾®æœåŠ¡è¦æ³¨å†Œåˆ°çš„åœ°å€.
 #        #http://localhost:3000/eureka
 #        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
 
@@ -18,10 +18,15 @@ server:
   port: 8761
 
 eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
   instance:
     hostname: localhost
+
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+

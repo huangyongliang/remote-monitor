@@ -2,9 +2,7 @@ package com.hyl.client.intf;
 
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * @author hyl
@@ -12,6 +10,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
  */
 @FeignClient("MonitorServer")
 public interface MonitorIntf {
-    @RequestMapping(value = "/exeClass", method = GET)
+    @PostMapping( "/exeClass")
     String exeClass(ClassDto classDto);
 }

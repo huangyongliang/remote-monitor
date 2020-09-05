@@ -1,5 +1,6 @@
 package com.hyl.server.service;
 
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MonitorController {
 
-    @RequestMapping("/exeClass")
+    @PostMapping("/exeClass")
     public String exeClass(@RequestBody ClassDto classDto){
 
         log.info("执行类： "+classDto.getName());
