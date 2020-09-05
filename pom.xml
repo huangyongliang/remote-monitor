@@ -18,6 +18,9 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
 	</properties>
+    <modules>
+        <module>register</module>
+    </modules>
 
 	<dependencies>
 		<dependency>
